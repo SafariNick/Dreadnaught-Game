@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: c51a3fc88953870458035615e0258948
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4638846774470817155
+    second: TeamNurgle_0
+  - first:
+      213: 4350771539956011904
+    second: TeamNurgle_1
+  - first:
+      213: 4589614591010619209
+    second: TeamNurgle_2
+  - first:
+      213: -749243867886492601
+    second: TeamNurgle_3
+  - first:
+      213: 2649044150260785581
+    second: TeamNurgle_4
+  - first:
+      213: 8347986467914981230
+    second: TeamNurgle_5
+  - first:
+      213: 6666374170925605949
+    second: TeamNurgle_6
+  - first:
+      213: -1892110017817887397
+    second: TeamNurgle_7
+  - first:
+      213: 4601913090078408152
+    second: TeamNurgle_8
+  - first:
+      213: 376310206381700594
+    second: TeamNurgle_9
+  - first:
+      213: -2537416086101091661
+    second: TeamNurgle_10
+  - first:
+      213: -7772560610631851
+    second: TeamNurgle_11
+  - first:
+      213: -6647557241187748201
+    second: TeamNurgle_12
+  - first:
+      213: -8957579250800477681
+    second: TeamNurgle_13
+  - first:
+      213: -2786085679703450057
+    second: TeamNurgle_14
+  - first:
+      213: -3227334769430188287
+    second: TeamNurgle_15
+  - first:
+      213: 8223783062200325646
+    second: TeamNurgle_16
+  - first:
+      213: -7301456931425560972
+    second: TeamNurgle_17
+  - first:
+      213: -1471857974665984525
+    second: TeamNurgle_18
+  - first:
+      213: 2740227052692821711
+    second: TeamNurgle_19
+  - first:
+      213: 291890256044112776
+    second: TeamNurgle_20
+  - first:
+      213: -6972489241126385444
+    second: TeamNurgle_21
+  - first:
+      213: -4376437530615222049
+    second: TeamNurgle_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: greatUnclean
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 3919
+        width: 786
+        height: 927
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7a4330bf618f9fb0800000000000000
+      internalID: -4638846774470817155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greatUnclean1
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 3904
+        width: 677
+        height: 936
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94f3329572691bf30800000000000000
+      internalID: 4589614591010619209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greatUnclean2
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 3869
+        width: 747
+        height: 1016
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7446c7cfba62a95f0800000000000000
+      internalID: -749243867886492601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banner
+      rect:
+        serializedVersion: 2
+        x: 3223
+        y: 3912
+        width: 482
+        height: 875
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da1ee929e9b43c420800000000000000
+      internalID: 2649044150260785581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurglings
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 3321
+        width: 431
+        height: 498
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73e197be5d5d559d0800000000000000
+      internalID: -2786085679703450057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurglings1
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 3328
+        width: 385
+        height: 445
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e061354af1fb02270800000000000000
+      internalID: 8223783062200325646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurgle
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 3040
+        width: 563
+        height: 688
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 476d09b0b930caa90800000000000000
+      internalID: -7301456931425560972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeamNurgle_18
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 3721
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f5453468f8e29be0800000000000000
+      internalID: -1471857974665984525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flyer1
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1523
+        width: 1392
+        height: 1409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88b38e034a00d0400800000000000000
+      internalID: 291890256044112776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flyer2
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 1518
+        width: 973
+        height: 1335
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd8cd6e1afdbc3f90800000000000000
+      internalID: -6972489241126385444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3e59db31a2d073f40b06095e260188fb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TeamNurgle_1: 4350771539956011904
+      TeamNurgle_10: -2537416086101091661
+      TeamNurgle_11: -7772560610631851
+      TeamNurgle_12: -6647557241187748201
+      TeamNurgle_13: -8957579250800477681
+      TeamNurgle_15: -3227334769430188287
+      TeamNurgle_18: -1471857974665984525
+      TeamNurgle_19: 2740227052692821711
+      TeamNurgle_22: -4376437530615222049
+      TeamNurgle_5: 8347986467914981230
+      TeamNurgle_6: 6666374170925605949
+      TeamNurgle_7: -1892110017817887397
+      TeamNurgle_8: 4601913090078408152
+      TeamNurgle_9: 376310206381700594
+      banner: 2649044150260785581
+      flyer1: 291890256044112776
+      flyer2: -6972489241126385444
+      greatUnclean: -4638846774470817155
+      greatUnclean1: 4589614591010619209
+      greatUnclean2: -749243867886492601
+      nurgle: -7301456931425560972
+      nurglings: -2786085679703450057
+      nurglings1: 8223783062200325646
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

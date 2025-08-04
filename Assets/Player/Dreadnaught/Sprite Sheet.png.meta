@@ -1,0 +1,786 @@
+fileFormatVersion: 2
+guid: dfbc549dbac6fc34bb0b5e08ceee2ab0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 518342219649477403
+    second: PSmech_0
+  - first:
+      213: 8060754491117397930
+    second: PSmech_1
+  - first:
+      213: -3299059061245021055
+    second: PSmech_2
+  - first:
+      213: -5947697364596690022
+    second: PSmech_3
+  - first:
+      213: -666673534866483835
+    second: PSmech_4
+  - first:
+      213: 4291358104169356734
+    second: PSmech_5
+  - first:
+      213: 297936450777568548
+    second: PSmech_6
+  - first:
+      213: -1958821082157798148
+    second: PSmech_7
+  - first:
+      213: 31445004276229464
+    second: PSmech_8
+  - first:
+      213: 1281682839626618234
+    second: PSmech_9
+  - first:
+      213: -1610932428330920210
+    second: PSmech_10
+  - first:
+      213: -4162411440208213270
+    second: PSmech_11
+  - first:
+      213: -7812926575193746989
+    second: PSmech_12
+  - first:
+      213: -7628222817626774498
+    second: PSmech_13
+  - first:
+      213: 1996497891401302060
+    second: PSmech_14
+  - first:
+      213: -2674630403862218850
+    second: PSmech_15
+  - first:
+      213: -2831359352790513387
+    second: PSmech_16
+  - first:
+      213: -5193864995002310325
+    second: PSmech_17
+  - first:
+      213: -6971987138478622942
+    second: PSmech_18
+  - first:
+      213: 3005739888150002437
+    second: PSmech_19
+  - first:
+      213: -6211022878930172586
+    second: PSmech_20
+  - first:
+      213: -8399460651786631283
+    second: PSmech_21
+  - first:
+      213: 8939959243872390330
+    second: PSmech_22
+  - first:
+      213: -2440467595240808211
+    second: PSmech_23
+  - first:
+      213: 1839970542412394697
+    second: PSmech_24
+  - first:
+      213: -7841071443452900556
+    second: PSmech_25
+  - first:
+      213: 4449033119992734713
+    second: PSmech_26
+  - first:
+      213: 3378072966263003266
+    second: PSmech_27
+  - first:
+      213: -4672874764533358473
+    second: PSmech_28
+  - first:
+      213: 5036940568522532416
+    second: PSmech_29
+  - first:
+      213: 1529303900906762579
+    second: PSmech_30
+  - first:
+      213: -5445160604466119540
+    second: PSmech_31
+  - first:
+      213: -7885069052784611374
+    second: PSmech_32
+  - first:
+      213: 2460736537344602299
+    second: PSmech_33
+  - first:
+      213: 5873785297417035536
+    second: PSmech_34
+  - first:
+      213: -3671714127338162726
+    second: PSmech_35
+  - first:
+      213: -6328704464926676640
+    second: PSmech_36
+  - first:
+      213: -6316967153295626351
+    second: PSmech_37
+  - first:
+      213: -8101161156593524052
+    second: PSmech_38
+  - first:
+      213: 2985453583570628495
+    second: PSmech_39
+  - first:
+      213: 8419361280620425515
+    second: PSmech_40
+  - first:
+      213: -8142240798349469526
+    second: PSmech_41
+  - first:
+      213: -1360022161091768310
+    second: PSmech_42
+  - first:
+      213: -8167274486980516504
+    second: PSmech_43
+  - first:
+      213: 934557439293322346
+    second: PSmech_44
+  - first:
+      213: 420244176300233912
+    second: PSmech_45
+  - first:
+      213: 5099245155382947339
+    second: PSmech_46
+  - first:
+      213: 6192404631671926855
+    second: PSmech_47
+  - first:
+      213: 5910521988895002713
+    second: PSmech_48
+  - first:
+      213: 8804130174199114978
+    second: PSmech_49
+  - first:
+      213: 7735102088611847247
+    second: PSmech_50
+  - first:
+      213: -415469871627992555
+    second: PSmech_51
+  - first:
+      213: -9206756890906407280
+    second: PSmech_52
+  - first:
+      213: 6736209691394039716
+    second: PSmech_53
+  - first:
+      213: 5354228180568518135
+    second: PSmech_54
+  - first:
+      213: -8171702009122747972
+    second: PSmech_55
+  - first:
+      213: -6572837898601364415
+    second: PSmech_56
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PSmech_0fist
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4846
+        width: 1322
+        height: 1406
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1b6b42a085813700800000000000000
+      internalID: 518342219649477403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSmech_1fist
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 4815
+        width: 1413
+        height: 1437
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa7efa0808d8ddf60800000000000000
+      internalID: 8060754491117397930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSmech_5front
+      rect:
+        serializedVersion: 2
+        x: 3301
+        y: 4908
+        width: 1494
+        height: 1344
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebd120b8577fd8b30800000000000000
+      internalID: 4291358104169356734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSmech_6gun
+      rect:
+        serializedVersion: 2
+        x: 4885
+        y: 4856
+        width: 1244
+        height: 1396
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 425dc3a9f9b722400800000000000000
+      internalID: 297936450777568548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSmech_7gun
+      rect:
+        serializedVersion: 2
+        x: 6515
+        y: 4852
+        width: 1267
+        height: 1400
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfc2073aa9ed0d4e0800000000000000
+      internalID: -1958821082157798148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSmech_16gun
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3234
+        width: 1262
+        height: 1465
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51901797badf4b8d0800000000000000
+      internalID: -2831359352790513387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSmech_17gun
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 3225
+        width: 1130
+        height: 1387
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b412d892e4fabe7b0800000000000000
+      internalID: -5193864995002310325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSmech_18
+      rect:
+        serializedVersion: 2
+        x: 3310
+        y: 3289
+        width: 1444
+        height: 1313
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227b36003a68e3f90800000000000000
+      internalID: -6971987138478622942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSmech_19
+      rect:
+        serializedVersion: 2
+        x: 4952
+        y: 3197
+        width: 1306
+        height: 1383
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50b3760d08886b920800000000000000
+      internalID: 3005739888150002437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSmech_24
+      rect:
+        serializedVersion: 2
+        x: 6653
+        y: 3220
+        width: 999
+        height: 1349
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c07ca1b573e88910800000000000000
+      internalID: 1839970542412394697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSmech_32missle
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1648
+        width: 1239
+        height: 1479
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dfe85f297b929290800000000000000
+      internalID: -7885069052784611374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSmech_33missle
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 1628
+        width: 1244
+        height: 1499
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb0ff3ad7da462220800000000000000
+      internalID: 2460736537344602299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSmech_36idle
+      rect:
+        serializedVersion: 2
+        x: 6704
+        y: 1735
+        width: 1434
+        height: 1404
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 069ed9fe1dceb28a0800000000000000
+      internalID: -6328704464926676640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSmech_38missle
+      rect:
+        serializedVersion: 2
+        x: 5053
+        y: 1691
+        width: 1445
+        height: 1403
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca2ec0199d4e29f80800000000000000
+      internalID: -8101161156593524052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSmech_39missle
+      rect:
+        serializedVersion: 2
+        x: 3445
+        y: 1577
+        width: 1130
+        height: 1477
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8fe42677367e6920800000000000000
+      internalID: 2985453583570628495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSmech_46
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 81
+        width: 1296
+        height: 1492
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0e6b3da37824c640800000000000000
+      internalID: 5099245155382947339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSmech_48
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 99
+        width: 1244
+        height: 1465
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 950d8310f64660250800000000000000
+      internalID: 5910521988895002713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSmech_49
+      rect:
+        serializedVersion: 2
+        x: 3402
+        y: 180
+        width: 1262
+        height: 1337
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ecaf654fbd8e2a70800000000000000
+      internalID: 8804130174199114978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSmech_50gun
+      rect:
+        serializedVersion: 2
+        x: 4885
+        y: 99
+        width: 1244
+        height: 1421
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4c57150e5a985b60800000000000000
+      internalID: 7735102088611847247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSmech_51gun
+      rect:
+        serializedVersion: 2
+        x: 6705
+        y: 168
+        width: 1062
+        height: 1330
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5128cbe5a54fb3af0800000000000000
+      internalID: -415469871627992555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e76a46d22cc1e3245b18ae6d9ca450c8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PSmech_0: 527796588
+      PSmech_0fist: 518342219649477403
+      PSmech_10: -1610932428330920210
+      PSmech_11: -4162411440208213270
+      PSmech_12: -7812926575193746989
+      PSmech_13: -7628222817626774498
+      PSmech_14: 1996497891401302060
+      PSmech_15: -2674630403862218850
+      PSmech_16gun: -2831359352790513387
+      PSmech_17gun: -5193864995002310325
+      PSmech_18: -6971987138478622942
+      PSmech_19: 3005739888150002437
+      PSmech_1fist: 8060754491117397930
+      PSmech_2: -3299059061245021055
+      PSmech_20: -6211022878930172586
+      PSmech_21: -8399460651786631283
+      PSmech_22: 8939959243872390330
+      PSmech_23: -2440467595240808211
+      PSmech_24: 1839970542412394697
+      PSmech_25: -7841071443452900556
+      PSmech_26: 4449033119992734713
+      PSmech_27: 3378072966263003266
+      PSmech_28: -4672874764533358473
+      PSmech_29: 5036940568522532416
+      PSmech_3: -5947697364596690022
+      PSmech_30: 1529303900906762579
+      PSmech_31: -5445160604466119540
+      PSmech_32missle: -7885069052784611374
+      PSmech_33missle: 2460736537344602299
+      PSmech_34: 5873785297417035536
+      PSmech_35: -3671714127338162726
+      PSmech_36idle: -6328704464926676640
+      PSmech_37: -6316967153295626351
+      PSmech_38missle: -8101161156593524052
+      PSmech_39missle: 2985453583570628495
+      PSmech_4: -666673534866483835
+      PSmech_40: 8419361280620425515
+      PSmech_41: -8142240798349469526
+      PSmech_42: -1360022161091768310
+      PSmech_43: -8167274486980516504
+      PSmech_44: 934557439293322346
+      PSmech_45: 420244176300233912
+      PSmech_46: 5099245155382947339
+      PSmech_47: 6192404631671926855
+      PSmech_48: 5910521988895002713
+      PSmech_49: 8804130174199114978
+      PSmech_50gun: 7735102088611847247
+      PSmech_51gun: -415469871627992555
+      PSmech_52: -9206756890906407280
+      PSmech_53: 6736209691394039716
+      PSmech_54: 5354228180568518135
+      PSmech_55: -8171702009122747972
+      PSmech_56: -6572837898601364415
+      PSmech_5front: 4291358104169356734
+      PSmech_6gun: 297936450777568548
+      PSmech_7gun: -1958821082157798148
+      PSmech_8: 31445004276229464
+      PSmech_9: 1281682839626618234
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
