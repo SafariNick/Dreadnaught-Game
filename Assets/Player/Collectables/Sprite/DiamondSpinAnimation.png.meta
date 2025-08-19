@@ -1,0 +1,576 @@
+fileFormatVersion: 2
+guid: bf021aab045622048a08e910176ea796
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5802554974412701161
+    second: DiamondSpinAnimation_0
+  - first:
+      213: -5391410054283981736
+    second: DiamondSpinAnimation_1
+  - first:
+      213: -1175187073837331313
+    second: DiamondSpinAnimation_2
+  - first:
+      213: -5262673097734921890
+    second: DiamondSpinAnimation_3
+  - first:
+      213: -6153189578133006522
+    second: DiamondSpinAnimation_4
+  - first:
+      213: 5256039674789484710
+    second: DiamondSpinAnimation_5
+  - first:
+      213: 4753677130991408460
+    second: DiamondSpinAnimation_6
+  - first:
+      213: -1335242130426079951
+    second: DiamondSpinAnimation_7
+  - first:
+      213: 3476015224145378715
+    second: DiamondSpinAnimation_8
+  - first:
+      213: -6978550997535868480
+    second: DiamondSpinAnimation_9
+  - first:
+      213: 2542261203964284569
+    second: DiamondSpinAnimation_10
+  - first:
+      213: 4693276303284744283
+    second: DiamondSpinAnimation_11
+  - first:
+      213: 6792155451449869103
+    second: DiamondSpinAnimation_12
+  - first:
+      213: 8888956194567628829
+    second: DiamondSpinAnimation_13
+  - first:
+      213: 3662274454691840166
+    second: DiamondSpinAnimation_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DiamondSpinAnimation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ed7b878101d68050800000000000000
+      internalID: 5802554974412701161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiamondSpinAnimation_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 2
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85c0febde1ddd25b0800000000000000
+      internalID: -5391410054283981736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiamondSpinAnimation_2
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 2
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c8b4f2595e0bfe0800000000000000
+      internalID: -1175187073837331313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiamondSpinAnimation_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 2
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e51618053ba37f6b0800000000000000
+      internalID: -5262673097734921890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiamondSpinAnimation_4
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 2
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6471fbffdaa7b9aa0800000000000000
+      internalID: -6153189578133006522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiamondSpinAnimation_5
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 2
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a8df2d8c3431f840800000000000000
+      internalID: 5256039674789484710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiamondSpinAnimation_6
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 2
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4514a12a2478f140800000000000000
+      internalID: 4753677130991408460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiamondSpinAnimation_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13551d65b54487de0800000000000000
+      internalID: -1335242130426079951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiamondSpinAnimation_8
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9df80dfd694d3030800000000000000
+      internalID: 3476015224145378715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiamondSpinAnimation_9
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 2
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c93de877d4372f90800000000000000
+      internalID: -6978550997535868480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiamondSpinAnimation_10
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 2
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99e4c84781de74320800000000000000
+      internalID: 2542261203964284569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiamondSpinAnimation_11
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 2
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50bb0a8eedd12140800000000000000
+      internalID: 4693276303284744283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiamondSpinAnimation_12
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 2
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2307ee8565924e50800000000000000
+      internalID: 6792155451449869103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiamondSpinAnimation_13
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 2
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d182631309aeb5b70800000000000000
+      internalID: 8888956194567628829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiamondSpinAnimation_14
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 2
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a005e5863303d230800000000000000
+      internalID: 3662274454691840166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiamondSpinAnimation_15
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 3
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a48cc442fbbc87d47aec230855ceda33
+      internalID: 589823795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiamondSpinAnimation_16
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 2
+        width: 5
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30043c82694eee94ebd012eb8ac98d29
+      internalID: 335481167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiamondSpinAnimation_17
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 2
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 147c680dadfb1e64b8c295e80f355c15
+      internalID: 1901389648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b8de1b17715bfc54e855b65ecdd1d6a9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DiamondSpinAnimation_0: 5802554974412701161
+      DiamondSpinAnimation_1: -5391410054283981736
+      DiamondSpinAnimation_10: 2542261203964284569
+      DiamondSpinAnimation_11: 4693276303284744283
+      DiamondSpinAnimation_12: 6792155451449869103
+      DiamondSpinAnimation_13: 8888956194567628829
+      DiamondSpinAnimation_14: 3662274454691840166
+      DiamondSpinAnimation_15: 589823795
+      DiamondSpinAnimation_16: 335481167
+      DiamondSpinAnimation_17: 1901389648
+      DiamondSpinAnimation_2: -1175187073837331313
+      DiamondSpinAnimation_3: -5262673097734921890
+      DiamondSpinAnimation_4: -6153189578133006522
+      DiamondSpinAnimation_5: 5256039674789484710
+      DiamondSpinAnimation_6: 4753677130991408460
+      DiamondSpinAnimation_7: -1335242130426079951
+      DiamondSpinAnimation_8: 3476015224145378715
+      DiamondSpinAnimation_9: -6978550997535868480
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

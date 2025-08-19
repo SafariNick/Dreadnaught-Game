@@ -1,0 +1,383 @@
+fileFormatVersion: 2
+guid: 1885bb8308754dd4cb4d028e3a8f80eb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5452592280065713096
+    second: TeamNurgle 1_0
+  - first:
+      213: -8370105718356549893
+    second: TeamNurgle 1_1
+  - first:
+      213: 5927017012439204311
+    second: TeamNurgle 1_2
+  - first:
+      213: -1865630189448728015
+    second: TeamNurgle 1_3
+  - first:
+      213: 5856798064265960326
+    second: TeamNurgle 1_4
+  - first:
+      213: 2608449499313026431
+    second: TeamNurgle 1_5
+  - first:
+      213: 7860522874105837152
+    second: TeamNurgle 1_6
+  - first:
+      213: 6378513621996988826
+    second: TeamNurgle 1_7
+  - first:
+      213: 8305026493794738269
+    second: TeamNurgle 1_8
+  - first:
+      213: -384737607096792668
+    second: TeamNurgle 1_9
+  - first:
+      213: -822848219943893533
+    second: TeamNurgle 1_10
+  - first:
+      213: -3000917180215541092
+    second: TeamNurgle 1_11
+  - first:
+      213: 1032922058213707002
+    second: TeamNurgle 1_12
+  - first:
+      213: -1579778854353941322
+    second: TeamNurgle 1_13
+  - first:
+      213: 7881836718602175587
+    second: TeamNurgle 1_14
+  - first:
+      213: -4936820873016694076
+    second: TeamNurgle 1_15
+  - first:
+      213: -4838531178854944547
+    second: TeamNurgle 1_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GreatUnclean1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 3913
+        width: 786
+        height: 935
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c3aa562acf7bab40800000000000000
+      internalID: 5452592280065713096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreatUnclean2
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 3904
+        width: 677
+        height: 936
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d1c224f19ef04250800000000000000
+      internalID: 5927017012439204311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreatUnclean3
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 3869
+        width: 747
+        height: 1016
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 132f9ab2a33fb16e0800000000000000
+      internalID: -1865630189448728015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NurgleFlag
+      rect:
+        serializedVersion: 2
+        x: 3223
+        y: 3912
+        width: 482
+        height: 875
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68b94cd0fc6874150800000000000000
+      internalID: 5856798064265960326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nurgling1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 3371
+        width: 410
+        height: 448
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c92c2e069b99a56d0800000000000000
+      internalID: -3000917180215541092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nurgling2
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 3364
+        width: 341
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afc4e78a32da55e00800000000000000
+      internalID: 1032922058213707002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nurgle
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 3124
+        width: 370
+        height: 604
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc4f82808f731ae0800000000000000
+      internalID: -1579778854353941322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingNurgle1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1898
+        width: 1155
+        height: 1169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 364c9ed5cb8e16d60800000000000000
+      internalID: 7881836718602175587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingNurgle2
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 1899
+        width: 807
+        height: 1108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca2b188293ec7bb0800000000000000
+      internalID: -4936820873016694076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6b39c2a746e9c73448b11fa3449b1b12
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FlyingNurgle1: 7881836718602175587
+      FlyingNurgle2: -4936820873016694076
+      GreatUnclean1: 5452592280065713096
+      GreatUnclean2: 5927017012439204311
+      GreatUnclean3: -1865630189448728015
+      Nurgle: -1579778854353941322
+      NurgleFlag: 5856798064265960326
+      Nurgling1: -3000917180215541092
+      Nurgling2: 1032922058213707002
+      TeamNurgle 1_1: -8370105718356549893
+      TeamNurgle 1_10: -822848219943893533
+      TeamNurgle 1_16: -4838531178854944547
+      TeamNurgle 1_5: 2608449499313026431
+      TeamNurgle 1_6: 7860522874105837152
+      TeamNurgle 1_7: 6378513621996988826
+      TeamNurgle 1_8: 8305026493794738269
+      TeamNurgle 1_9: -384737607096792668
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -271,10 +271,10 @@ TextureImporter:
       name: PSmech_0fist
       rect:
         serializedVersion: 2
-        x: 0
+        x: 163
         y: 4846
-        width: 1322
-        height: 1406
+        width: 1097
+        height: 1333
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,10 +293,10 @@ TextureImporter:
       name: PSmech_1fist
       rect:
         serializedVersion: 2
-        x: 1625
-        y: 4815
-        width: 1413
-        height: 1437
+        x: 1919
+        y: 4828
+        width: 1119
+        height: 1307
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,7 +318,7 @@ TextureImporter:
         x: 3301
         y: 4908
         width: 1494
-        height: 1344
+        height: 1309
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +337,10 @@ TextureImporter:
       name: PSmech_6gun
       rect:
         serializedVersion: 2
-        x: 4885
+        x: 4961
         y: 4856
-        width: 1244
-        height: 1396
+        width: 1151
+        height: 1350
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,10 +359,10 @@ TextureImporter:
       name: PSmech_7gun
       rect:
         serializedVersion: 2
-        x: 6515
+        x: 6583
         y: 4852
-        width: 1267
-        height: 1400
+        width: 1199
+        height: 1356
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,10 +381,10 @@ TextureImporter:
       name: PSmech_16gun
       rect:
         serializedVersion: 2
-        x: 0
-        y: 3234
-        width: 1262
-        height: 1465
+        x: 72
+        y: 3291
+        width: 1190
+        height: 1351
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,9 +404,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1815
-        y: 3225
+        y: 3269
         width: 1130
-        height: 1387
+        height: 1343
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -448,9 +448,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4952
-        y: 3197
-        width: 1306
-        height: 1383
+        y: 3237
+        width: 1249
+        height: 1343
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,10 +491,10 @@ TextureImporter:
       name: PSmech_32missle
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1648
-        width: 1239
-        height: 1479
+        x: 62
+        y: 1727
+        width: 1087
+        height: 1400
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -513,10 +513,10 @@ TextureImporter:
       name: PSmech_33missle
       rect:
         serializedVersion: 2
-        x: 1625
-        y: 1628
-        width: 1244
-        height: 1499
+        x: 1704
+        y: 1703
+        width: 1071
+        height: 1424
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -538,7 +538,7 @@ TextureImporter:
         x: 6704
         y: 1735
         width: 1434
-        height: 1404
+        height: 1318
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -580,9 +580,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3445
-        y: 1577
+        y: 1643
         width: 1130
-        height: 1477
+        height: 1413
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -601,10 +601,10 @@ TextureImporter:
       name: PSmech_46
       rect:
         serializedVersion: 2
-        x: 28
-        y: 81
-        width: 1296
-        height: 1492
+        x: 169
+        y: 158
+        width: 1155
+        height: 1329
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -623,10 +623,10 @@ TextureImporter:
       name: PSmech_48
       rect:
         serializedVersion: 2
-        x: 1625
-        y: 99
-        width: 1244
-        height: 1465
+        x: 1706
+        y: 176
+        width: 1163
+        height: 1339
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -667,10 +667,10 @@ TextureImporter:
       name: PSmech_50gun
       rect:
         serializedVersion: 2
-        x: 4885
-        y: 99
-        width: 1244
-        height: 1421
+        x: 4950
+        y: 186
+        width: 1085
+        height: 1334
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
