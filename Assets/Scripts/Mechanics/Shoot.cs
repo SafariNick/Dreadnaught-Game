@@ -10,6 +10,7 @@ public class Shoot : MonoBehaviour
     [SerializeField] private Projectile smallBulletPrefab = null;
     //[SerializeField] private Transform rightSpawn;
     [SerializeField] private Transform leftSpawn;
+    [SerializeField] private Transform leftMissleSpawn;
     [SerializeField] private Transform currentSpawn;
     [SerializeField] private Transform missleSpawn;
     [SerializeField] private Transform bigBulletSpawn;
@@ -65,11 +66,10 @@ public class Shoot : MonoBehaviour
         }
         else
         {
+            missleSpawn = leftMissleSpawn; // Assuming leftMissleSpawn is the spawn point for flipped missiles
             currentSpawn = leftSpawn; // Assuming leftSpawn is the spawn point for flipped shots
             curProjectile = Instantiate(projectileToFire, currentSpawn.position, Quaternion.identity);
             curProjectile.SetVelocity(new Vector2(-initShotVelocity.x, initShotVelocity.y));
-            //slow the bullet if going left
-            curProjectile.SetVelocity(new Vector2(-initShotVelocity.x * 0.1f, initShotVelocity.y));
         }
     }
 }

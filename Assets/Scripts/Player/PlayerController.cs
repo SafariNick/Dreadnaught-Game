@@ -62,8 +62,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
-
     private Vector2 groundCheckPos => new Vector2(col.bounds.min.x + col.bounds.extents.x, col.bounds.min.y);
 
     void Start()
