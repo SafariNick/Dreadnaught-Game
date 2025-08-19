@@ -3,6 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Projectile : MonoBehaviour
 {
+    public ProjectileType projectileType;
+
     [SerializeField, Range(1, 20)] private float lifetime = 1.0f;
     [SerializeField] private float bulletVFXLifetime = 0.5f; // Lifetime of the bullet VFX in seconds
     //private void Start() => Destroy(gameObject, lifetime);
@@ -38,4 +40,11 @@ public class Projectile : MonoBehaviour
     //[SerializeField] private float bulletLifetime = 2f; // Lifetime of the bullets in seconds
 
 
+}
+
+public enum ProjectileType
+{
+    Missle,
+    BigBullet,
+    SmallBullet
 }

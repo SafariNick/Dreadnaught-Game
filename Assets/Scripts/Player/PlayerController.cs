@@ -92,10 +92,10 @@ public class PlayerController : MonoBehaviour
         groundCheck.CheckIsGrounded();
         //anim.SetFloat("Speed", Mathf.Abs(hValue));
 
-        if ( Input.GetButtonDown("Fire1"))
-        {
-            anim.SetTrigger("Fire");
-        }
+        //if ( Input.GetButtonDown("Fire1"))
+        //{
+        //    anim.SetTrigger("Fire");
+        //}
         if (currentState.IsName("Fire"))
         {
             rb.linearVelocity = Vector2.zero;

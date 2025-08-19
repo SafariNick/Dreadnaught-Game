@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e9d4234ecf9544a925c64220b66d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileType: 2
   lifetime: 1
-  bulletVFXLifetime: 0.5
+  bulletVFXLifetime: 0.6
   bulletPrefab: {fileID: 5106085284125003642, guid: 1c80d562ca7c6f047ac3d975452afcf6, type: 3}
