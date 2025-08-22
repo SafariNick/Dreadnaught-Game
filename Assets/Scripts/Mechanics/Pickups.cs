@@ -2,41 +2,38 @@ using UnityEngine;
 
 public class Pickups : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public enum PickupType
     {
-        Life,
-        Score,
-        Ammo,
-        PowerUp
-    }
-    public PickupType Life = PickupType.Life;
-    public PickupType Score = PickupType.Score;
-    void Start()
-    {
-
+        Life = 0,
+        Score = 1,
+        Powerup = 2,
+        Ammo = 3
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    public PickupType pickupType = PickupType.Life; // Type of the pickup
 
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             PlayerController pc = collision.GetComponent<PlayerController>();
-            pc.SetLives(pc.GetLives() + 1);
-            Debug.Log("Picked up!");
-            Destroy(gameObject);
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
 
+            switch (pickupType)
+            {
+                case PickupType.Life:
+                    pc.lives++;
+                    Debug.Log("Life collected! Current lives: " + pc.lives);
+                    break;
+                case PickupType.Score:
+                    pc.score++;
+                    Debug.Log("Score collected! Current score: " + pc.score);
+                    break;
+                case PickupType.Powerup:
+                    pc.ActivateJumpForceChange();
+                    break;
+            }
+
+            Destroy(gameObject); // Destroy the pickup after collection
         }
     }
 }

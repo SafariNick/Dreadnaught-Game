@@ -1,4 +1,8 @@
+using System.Collections;
 using UnityEngine;
+
+[RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Collider2D))]
+[RequireComponent(typeof(Animator))]
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,61 +12,28 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 10f;
     [Header("Player Lives and Score")]
-    [SerializeField] private int maxLives = 5; // Maximum lives allowed
+    [SerializeField] private int maxLives = 1000; // Maximum lives allowed
     private int _score = 0; // Player's score
-    private int _lives = 3;  // Current lives
+    private int _lives = 500;  // Current lives
     public Shoot shoot; // Reference to the Shoot component for firing projectiles
     [Header("Ground Check Settings")]
     [SerializeField] private float groundCheckRadius = 0.02f; // Radius for ground check
     [SerializeField] private GroundCheck groundChecker; // Ground checker component
                                                         
     //components
+    private LayerMask groundLayer;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private Collider2D col;
     private Animator anim;
     private GroundCheck groundCheck;
 
+    private Coroutine jumpForceChange = null;
     //Colliders
     private Collider2D hit; // Collider for ground detection
     private Collider2D hitArea; // Collider for ground detection area
 
-    private LayerMask groundLayer; // Layer for ground detection
-
-
-    //public void ActivateJumpForceChange()
-    //{
-    //    // This method can be called to change the jump force dynamically
-    //    jumpForce = 15f; // Example of changing the jump force
-    //    yield return new WaitForSeconds(5f); // Wait for 5 seconds before changing back
-    //    Debug.Log($"Jump force changed to: {jumpForce}");
-    //}
-
-    public int GetLives() => _lives; // Getter for lives
-    public void SetLives(int newLives)
-    {
-        if (newLives < 0)
-        {
-            Debug.LogWarning("Lives cannot be set to a negative value.");
-            return;
-        }
-        _lives = Mathf.Min(newLives, maxLives); // Ensure lives do not exceed maxLives
-        Debug.Log($"Lives set to: {_lives}");
-    }
-    public int score
-    {
-        get => score;
-        set
-        {
-            if (value < 0)
-                _score = 0; // Prevent negative score
-
-            else
-                _score = value; // Set score to the new value
-        }
-    }
-
-    private Vector2 groundCheckPos => new Vector2(col.bounds.min.x + col.bounds.extents.x, col.bounds.min.y);
+    //private Vector2 groundCheckPos => new Vector2(col.bounds.min.x + col.bounds.extents.x, col.bounds.min.y);
 
     void Start()
     {
@@ -81,10 +52,10 @@ public class PlayerController : MonoBehaviour
         }
         groundCheck = new GroundCheck(col, groundLayer, groundCheckRadius);
     }
-
     void Update()
     {
         float hValue = Input.GetAxis("Horizontal");
+        float vValue = Input.GetAxisRaw("Vertical");
         AnimatorStateInfo currentState = anim.GetCurrentAnimatorStateInfo(0);
         SpriteFlip(hValue);
 
@@ -102,8 +73,8 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire2"))
         {
-            anim.SetBool("BigGun", true );
-            
+            anim.SetBool("BigGun", true);
+
         }
         if (Input.GetButtonUp("Fire2"))
         {
@@ -116,13 +87,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire3"))
         {
             anim.SetBool("Missle", true);
-            
+
         }
         if (Input.GetButtonUp("Fire3"))
         {
             anim.SetBool("Missle", false);
         }
-
 
 
         if (Input.GetButtonDown("Jump") && jumpCount < maxJumpCount)
@@ -136,12 +106,12 @@ public class PlayerController : MonoBehaviour
             jumpCount = 1; // Reset jump count when grounded
             anim.SetBool("isJumping", false);
         }
-       //when player is jumping and left mouse button is clicked, set the animation to fistSlam.
+        //when player is jumping and left mouse button is clicked, set the animation to fistSlam.
         if (Input.GetButtonDown("Fire1") && currentState.IsName("jump"))
         {
             anim.SetTrigger("FistSlam");
         }
-        
+
         if (!currentState.IsName("jump"))
         {
             if (Input.GetButtonDown("Fire1"))
@@ -154,25 +124,120 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("hValue", Mathf.Abs(hValue));
         anim.SetBool("isGrounded", groundCheck.IsGrounded);
     }
+    public void ActivateJumpForceChange()
+    {
+        //start a coroutine that changes the jump force for x seconds
+        if (jumpForceChange != null)
+        {
+            StopCoroutine(jumpForceChange);
+            jumpForceChange = null;
+            jumpForce = 6; // Reset to default jump force
+        }
+
+        jumpForceChange = StartCoroutine(ChangeJumpForce()); // Change jump force to 12 for 3 seconds
+    }
+    private IEnumerator ChangeJumpForce()
+    {
+        jumpForce = 12; // Set new jump force
+        Debug.Log($"Jump force change to {jumpForce} at {Time.time}");
+        yield return new WaitForSeconds(5f); // Wait for 5 seconds
+        jumpForce = 6; // Reset to default jump force
+        Debug.Log($"Jump force change to {jumpForce} at {Time.time}");
+        jumpForceChange = null; // Clear the coroutine reference
+    }
+
+    public int GetLives() => _lives; // Getter for lives
+    public void SetLives(int newLives)
+    {
+        if (newLives < 0)
+        {
+            Debug.LogWarning("Lives cannot be set to a negative value.");
+            return;
+        }
+        _lives = Mathf.Min(newLives, maxLives); // Ensure lives do not exceed maxLives
+        Debug.Log($"Lives set to: {_lives}");
+    }
+    public int score
+    {
+        get => _score;
+        set
+        {
+            if (value < 0)
+                _score = 0; // Prevent negative score
+
+            else
+                _score = value; // Set score to the new value
+        }
+    }
+    public int lives
+    {
+        get => _lives;
+        set
+        {
+            if (value < 0)
+            {
+                //gameover goes here
+                Debug.Log("Game Over! You have no lives left.");
+                _lives = 0;
+            }
+            else if (value > maxLives)
+            {
+                _lives = maxLives;
+            }
+            else
+            {
+                _lives = value;
+            }
+        }
+    }
+
 
     void SpriteFlip(float hValue)
     {
-        if (hValue > 0 && sr.flipX)
-        {
-            sr.flipX = false;
-        }
-        else if (hValue < 0 && !sr.flipX)
-        {
-            sr.flipX = true;
-        }
-        //when the player is shooting left, flip the missle sprite coming out of the player to the left
-        //if (hValue < 0 && Shoot != null)
+        //if (hValue > 0 && sr.flipX)
         //{
-        //    Shoot.flipX = true;
+        //    sr.flipX = false;
         //}
-        //else if (hValue > 0 && Shoot != null)
+        //else if (hValue < 0 && !sr.flipX)
         //{
-        //    Shoot.flipX = false;
+        //    sr.flipX = true;
         //}
+        if (hValue != 0) sr.flipX = (hValue < 0); // Simplified sprite flipping logic
+    
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Squish") && rb.linearVelocityY < 0)
+        {
+            collision.GetComponentInParent<Enemy>().TakeDamage(0, DamageType.JumpedOn);
+            rb.linearVelocity = Vector2.zero; // Stop the player from moving after squishing an enemy
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // Add a small upward force to simulate bounce
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+
     }
 }
+
