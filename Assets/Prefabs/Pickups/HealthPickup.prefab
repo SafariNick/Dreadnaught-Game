@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4317368745426081057}
   - component: {fileID: 2344220114855549227}
   - component: {fileID: 2694725195743784745}
-  - component: {fileID: 1837343890231519187}
+  - component: {fileID: 8070024568945202346}
   m_Layer: 7
   m_Name: HealthPickup
   m_TagString: Untagged
@@ -148,7 +148,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1837343890231519187
+--- !u!114 &8070024568945202346
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

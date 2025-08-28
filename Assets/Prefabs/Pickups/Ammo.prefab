@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9080143174785722429}
   - component: {fileID: 1472353708408623317}
   - component: {fileID: 6878476554263794128}
-  - component: {fileID: 6833533890893138664}
+  - component: {fileID: 4954478577601877858}
   m_Layer: 7
   m_Name: Ammo
   m_TagString: Untagged
@@ -148,7 +148,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6833533890893138664
+--- !u!114 &4954478577601877858
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

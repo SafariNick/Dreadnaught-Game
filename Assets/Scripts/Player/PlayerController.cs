@@ -11,11 +11,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int maxJumpCount = 2; // Maximum number of jumps allowed
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 10f;
-    [Header("Player Lives and Score")]
-    [SerializeField] private int maxLives = 1000; // Maximum lives allowed
-    private int _score = 0; // Player's score
-    private int _lives = 500;  // Current lives
-    public Shoot shoot; // Reference to the Shoot component for firing projectiles
+
+    
     [Header("Ground Check Settings")]
     [SerializeField] private float groundCheckRadius = 0.02f; // Radius for ground check
     [SerializeField] private GroundCheck groundChecker; // Ground checker component
@@ -27,7 +24,7 @@ public class PlayerController : MonoBehaviour
     private Collider2D col;
     private Animator anim;
     private GroundCheck groundCheck;
-
+    public Shoot shoot; // Reference to the Shoot component for firing projectiles
     private Coroutine jumpForceChange = null;
     //Colliders
     private Collider2D hit; // Collider for ground detection
@@ -145,52 +142,6 @@ public class PlayerController : MonoBehaviour
         Debug.Log($"Jump force change to {jumpForce} at {Time.time}");
         jumpForceChange = null; // Clear the coroutine reference
     }
-
-    public int GetLives() => _lives; // Getter for lives
-    public void SetLives(int newLives)
-    {
-        if (newLives < 0)
-        {
-            Debug.LogWarning("Lives cannot be set to a negative value.");
-            return;
-        }
-        _lives = Mathf.Min(newLives, maxLives); // Ensure lives do not exceed maxLives
-        Debug.Log($"Lives set to: {_lives}");
-    }
-    public int score
-    {
-        get => _score;
-        set
-        {
-            if (value < 0)
-                _score = 0; // Prevent negative score
-
-            else
-                _score = value; // Set score to the new value
-        }
-    }
-    public int lives
-    {
-        get => _lives;
-        set
-        {
-            if (value < 0)
-            {
-                //gameover goes here
-                Debug.Log("Game Over! You have no lives left.");
-                _lives = 0;
-            }
-            else if (value > maxLives)
-            {
-                _lives = maxLives;
-            }
-            else
-            {
-                _lives = value;
-            }
-        }
-    }
-
 
     void SpriteFlip(float hValue)
     {

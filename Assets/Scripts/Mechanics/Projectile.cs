@@ -7,11 +7,54 @@ public class Projectile : MonoBehaviour
 
     [SerializeField, Range(1, 20)] private float lifetime = 1.0f;
     [SerializeField] private float bulletVFXLifetime = 0.5f; // Lifetime of the bullet VFX in seconds
-    //private void Start() => Destroy(gameObject, lifetime);
+    [SerializeField] private float damage = 3;
+    [SerializeField] private GameObject bulletPrefab; // Prefab for the bullet explosion VFX
+
     public void SetVelocity(Vector2 velocity) => GetComponent<Rigidbody2D>().linearVelocity = velocity;
     
+  
 
-   [SerializeField] private GameObject bulletPrefab; // Prefab for the bullet
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (projectileType == ProjectileType.SmallBullet)
+        {
+            // Handle player projectile hitting an enemy
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(1); // Adjust damage value as necessary
+               
+            }
+        }
+        if (projectileType == ProjectileType.BigBullet)
+        {
+            // Handle player projectile hitting an enemy
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(20); // Adjust damage value as necessary
+                
+            }
+        }
+        if (projectileType == ProjectileType.Missle)
+        {
+            // Handle player projectile hitting an enemy
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(5); // Adjust damage value as necessary
+              
+            }
+        }
+
+        if (projectileType == ProjectileType.Enemy && collision.gameObject.CompareTag("Player"))
+        {
+            GameManager.Instance.lives--;
+            Destroy(gameObject);
+        }
+    }
+
     private void OnEnable()
     {
         CancelInvoke(nameof(Expire));
@@ -29,21 +72,16 @@ public class Projectile : MonoBehaviour
             if (bulletVFXLifetime > 0f) Destroy(bulletVFX, bulletVFXLifetime);
             
         }
+        
+     
         Destroy(gameObject);
     }
-
-    // change bullet speed 
-    //[SerializeField] private float bulletSpeed = 10f; // Speed of the bullets
-    //[SerializeField] private float missleSpeed = 15f; // Speed of the missiles
-    //[SerializeField] private float bigBulletSpeed = 12f; // Speed of the big bullets
-    //[SerializeField] private float smallBulletSpeed = 8f; // Speed of the small bullets
-    //[SerializeField] private float bulletLifetime = 2f; // Lifetime of the bullets in seconds
-
-
 }
 
 public enum ProjectileType
 {
+    
+    Enemy,
     Missle,
     BigBullet,
     SmallBullet

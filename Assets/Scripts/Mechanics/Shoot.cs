@@ -3,7 +3,7 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
     private SpriteRenderer sr;
-    [SerializeField] private Vector2 initShotVelocity = Vector2.zero; //bullet speed
+    private Vector2 initShotVelocity = Vector2.zero; //bullet speed
 
 
     [SerializeField] private Vector2 missleVel = Vector2.zero; //bullet speed
