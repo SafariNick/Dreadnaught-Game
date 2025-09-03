@@ -41,6 +41,7 @@ public abstract class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
+            sr.color = Color.red; // Change color to red to indicate death
             anim.SetTrigger("Death");
 
             // Destroy the enemy after the death animation is complete

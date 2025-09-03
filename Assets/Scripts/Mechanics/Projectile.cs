@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Projectile : MonoBehaviour
@@ -7,7 +8,7 @@ public class Projectile : MonoBehaviour
 
     [SerializeField, Range(1, 20)] private float lifetime = 1.0f;
     [SerializeField] private float bulletVFXLifetime = 0.5f; // Lifetime of the bullet VFX in seconds
-    [SerializeField] private float damage = 3;
+    [SerializeField] private float damage = 5;
     [SerializeField] private GameObject bulletPrefab; // Prefab for the bullet explosion VFX
 
     public void SetVelocity(Vector2 velocity) => GetComponent<Rigidbody2D>().linearVelocity = velocity;
@@ -24,7 +25,8 @@ public class Projectile : MonoBehaviour
             if (enemy != null)
             {
                 enemy.TakeDamage(1); // Adjust damage value as necessary
-               
+                GameManager.Instance.score += 1;
+
             }
         }
         if (projectileType == ProjectileType.BigBullet)
@@ -34,7 +36,8 @@ public class Projectile : MonoBehaviour
             if (enemy != null)
             {
                 enemy.TakeDamage(20); // Adjust damage value as necessary
-                
+                GameManager.Instance.score += 20;
+
             }
         }
         if (projectileType == ProjectileType.Missle)
@@ -44,13 +47,15 @@ public class Projectile : MonoBehaviour
             if (enemy != null)
             {
                 enemy.TakeDamage(5); // Adjust damage value as necessary
-              
+                GameManager.Instance.score += 5;
+
             }
         }
 
         if (projectileType == ProjectileType.Enemy && collision.gameObject.CompareTag("Player"))
         {
             GameManager.Instance.lives--;
+            GameManager.Instance.score -= 10;
             Destroy(gameObject);
         }
     }

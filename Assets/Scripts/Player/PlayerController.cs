@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int jumpCount = 1; // Track the number of jumps
     [SerializeField] private int maxJumpCount = 2; // Maximum number of jumps allowed
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float jumpForce = 10f;
+    [SerializeField] private float jumpForce = 5f;
 
     
     [Header("Ground Check Settings")]
@@ -24,14 +24,10 @@ public class PlayerController : MonoBehaviour
     private Collider2D col;
     private Animator anim;
     private GroundCheck groundCheck;
-    public Shoot shoot; // Reference to the Shoot component for firing projectiles
+    private Shoot shoot; // Reference to the Shoot component for firing projectiles
     private Coroutine jumpForceChange = null;
-    //Colliders
-    private Collider2D hit; // Collider for ground detection
-    private Collider2D hitArea; // Collider for ground detection area
 
-    //private Vector2 groundCheckPos => new Vector2(col.bounds.min.x + col.bounds.extents.x, col.bounds.min.y);
-
+  
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -39,6 +35,7 @@ public class PlayerController : MonoBehaviour
         col = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
         shoot = GetComponent<Shoot>();
+       
 
         groundLayer = LayerMask.GetMask("Ground");
 
@@ -51,6 +48,7 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+        
         float hValue = Input.GetAxis("Horizontal");
         float vValue = Input.GetAxisRaw("Vertical");
         AnimatorStateInfo currentState = anim.GetCurrentAnimatorStateInfo(0);
@@ -58,12 +56,7 @@ public class PlayerController : MonoBehaviour
 
         rb.linearVelocityX = hValue * moveSpeed;
         groundCheck.CheckIsGrounded();
-        //anim.SetFloat("Speed", Mathf.Abs(hValue));
-
-        //if ( Input.GetButtonDown("Fire1"))
-        //{
-        //    anim.SetTrigger("Fire");
-        //}
+      
         if (currentState.IsName("Fire"))
         {
             rb.linearVelocity = Vector2.zero;
@@ -90,8 +83,6 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("Missle", false);
         }
-
-
         if (Input.GetButtonDown("Jump") && jumpCount < maxJumpCount)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // Apply jump force
@@ -107,6 +98,16 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && currentState.IsName("jump"))
         {
             anim.SetTrigger("FistSlam");
+            //if player touches enemy while in fistSlam animation, enemy takes damage.
+            if (currentState.IsName("FistSlam"))
+            {
+                //check for enemies in a radius of 1 unit around the player.
+                Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, 1f, LayerMask.GetMask("Enemy"));
+                foreach (Collider2D enemy in hitEnemies)
+                {
+                    enemy.GetComponent<Enemy>().TakeDamage(50);
+                }
+            }
         }
 
         if (!currentState.IsName("jump"))
@@ -123,42 +124,36 @@ public class PlayerController : MonoBehaviour
     }
     public void ActivateJumpForceChange()
     {
-        //start a coroutine that changes the jump force for x seconds
         if (jumpForceChange != null)
         {
             StopCoroutine(jumpForceChange);
             jumpForceChange = null;
-            jumpForce = 6; // Reset to default jump force
+            jumpForce = 12; // Reset to default jump force
         }
 
-        jumpForceChange = StartCoroutine(ChangeJumpForce()); // Change jump force to 12 for 3 seconds
+        jumpForceChange = StartCoroutine(ChangeJumpForce());
     }
     private IEnumerator ChangeJumpForce()
     {
-        jumpForce = 12; // Set new jump force
+        jumpForce = 10; // Set new jump force
         Debug.Log($"Jump force change to {jumpForce} at {Time.time}");
         yield return new WaitForSeconds(5f); // Wait for 5 seconds
-        jumpForce = 6; // Reset to default jump force
+        jumpForce = 5; // Reset to default jump force
         Debug.Log($"Jump force change to {jumpForce} at {Time.time}");
         jumpForceChange = null; // Clear the coroutine reference
     }
 
     void SpriteFlip(float hValue)
     {
-        //if (hValue > 0 && sr.flipX)
-        //{
-        //    sr.flipX = false;
-        //}
-        //else if (hValue < 0 && !sr.flipX)
-        //{
-        //    sr.flipX = true;
-        //}
-        if (hValue != 0) sr.flipX = (hValue < 0); // Simplified sprite flipping logic
-    
+        if (hValue != 0) sr.flipX = (hValue < 0); 
+       
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            GameManager.Instance.lives--;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -178,6 +173,11 @@ public class PlayerController : MonoBehaviour
             collision.GetComponentInParent<Enemy>().TakeDamage(0, DamageType.JumpedOn);
             rb.linearVelocity = Vector2.zero; // Stop the player from moving after squishing an enemy
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // Add a small upward force to simulate bounce
+            Destroy(collision.gameObject);
+            jumpCount = 1; // Reset jump count after squishing an enemy
+            anim.SetBool("isJumping", true);
+            // Optionally, you can add a bounce effect or sound here
+
         }
     }
 

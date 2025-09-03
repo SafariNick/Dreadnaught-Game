@@ -43,11 +43,11 @@ GameObject:
   - component: {fileID: 8314464863454667553}
   - component: {fileID: 6240162621479813497}
   - component: {fileID: 5562714076741349334}
-  - component: {fileID: 7579000016308122185}
   - component: {fileID: 91628461299526823}
+  - component: {fileID: 7579000016308122185}
   m_Layer: 0
   m_Name: FlyingNurgle
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,10 +136,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89ba1303677d56440adff254b50fdb9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initShotVelocity: {x: 0, y: 0}
+  initShotVelocity: {x: 5, y: 0}
   leftSpawn: {fileID: 7204224426002368062}
   rightSpawn: {fileID: 7034355942378346190}
   projectilePrefab: {fileID: 5568462836881037220, guid: 2c3e470964437464e8688de92e12ffa5, type: 3}
+--- !u!114 &91628461299526823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5582803351514959595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d968c5824aaf7614db3f18534b5e6243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  Player: {fileID: 8845747615470993484, guid: 6e1b82556ec538c4194d8cf1c7595eea, type: 3}
+  fireRate: 2
+  detectionRadius: 10
 --- !u!95 &7579000016308122185
 Animator:
   serializedVersion: 7
@@ -162,25 +178,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &91628461299526823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5582803351514959595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d968c5824aaf7614db3f18534b5e6243, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 5
-  fireRate: 2
-  firePoint: {fileID: 0}
-  projectilePrefab: {fileID: 0}
-  projectileSpeed: 10
-  detectionRange: 20
-  Player: {fileID: 0}
 --- !u!1 &6090058906026867735
 GameObject:
   m_ObjectHideFlags: 0

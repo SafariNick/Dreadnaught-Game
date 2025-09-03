@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e9d4234ecf9544a925c64220b66d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileType: 1
+  projectileType: 0
   lifetime: 1
   bulletVFXLifetime: 0.6
   damage: 1

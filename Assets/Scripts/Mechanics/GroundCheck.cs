@@ -2,14 +2,13 @@ using UnityEngine;
 
 public class GroundCheck
 {
-    [SerializeField]private bool isGrounded;
-
+    private bool isGrounded;
     public bool IsGrounded => isGrounded;
+
     private LayerMask groundLayer;
     private Collider2D col;
     private Rigidbody2D rb;
     private float groundCheckRadius;
-
     private Vector2 groundCheckPos => new Vector2(col.bounds.min.x + col.bounds.extents.x, col.bounds.min.y);
 
     public GroundCheck(Collider2D collider, LayerMask LayerMask, float checkRadius)

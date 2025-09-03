@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,18 +15,28 @@ public class GameManager : MonoBehaviour
     private Vector3 currentCheckpoint;
     #endregion
 
+    public event Action<int> OnLivesChanged;
+    public event Action<int> OnScoreChanged;
+
     #region Stats
     private int _lives = 3;
     private int _score = 0;
+    private int _ammo = 100;
     public int score
     {
         get => _score;
         set
         {
             if (value < 0)
+            {
                 _score = 0;
+            }
             else
+            {
                 _score = value;
+            }
+            Debug.Log($"Score: {_score}");
+            OnScoreChanged?.Invoke(_score);
         }
     }
     public int lives
@@ -32,12 +44,14 @@ public class GameManager : MonoBehaviour
         get => _lives;
         set
         {
-            if (value < 0)
+            if (value < 1)
             {
                 //gameover goes here
                 Debug.Log("Game Over! You have no lives left.");
                 GameOver();
                 _lives = 0;
+
+
             }
             else if (value < _lives)
             {
@@ -56,8 +70,10 @@ public class GameManager : MonoBehaviour
                 _lives = value;
             }
             Debug.Log($"Lives: {_lives}");
+            OnLivesChanged?.Invoke(_lives);
         }
     }
+    
 
     public int maxLives = 9;
     #endregion
@@ -86,11 +102,16 @@ public class GameManager : MonoBehaviour
     }
     void GameOver()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(2);
+        
+      
+
+
     }
     void Respawn()
     {
         _playerInstance.transform.position = currentCheckpoint;
+
     }
 
     public void StartLevel(Vector3 startPositon)
@@ -98,6 +119,8 @@ public class GameManager : MonoBehaviour
         currentCheckpoint = startPositon;
         _playerInstance = Instantiate(playerPrefab, currentCheckpoint, Quaternion.identity);
         OnPlayerControllerCreated.Invoke(_playerInstance);
+        _lives = 3;
+        _score = 0;
     }
 
     // Update is called once per frame
@@ -107,7 +130,9 @@ public class GameManager : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().buildIndex == 0)
             {
+                GameOver();
                 SceneManager.LoadScene(1);
+               
             }
             else
             {
@@ -119,5 +144,11 @@ public class GameManager : MonoBehaviour
         {
             lives++;
         }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            lives--;
+        }
+
     }
 }

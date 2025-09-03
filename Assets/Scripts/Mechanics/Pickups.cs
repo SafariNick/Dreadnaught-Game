@@ -11,6 +11,8 @@ public class Pickups : MonoBehaviour
     }
 
     public PickupType pickupType = PickupType.Life; // Type of the pickup
+    
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,7 +27,7 @@ public class Pickups : MonoBehaviour
                     break;
                 case PickupType.Score:
                     GameManager.Instance.score++;
-                    Debug.Log("Score collected! Current score: " + GameManager.Instance.score);
+                    //Debug.Log("Score collected! Current score: " + GameManager.Instance.score);
                     break;
                 case PickupType.Powerup:
                     PlayerController pc = collision.GetComponent<PlayerController>();
