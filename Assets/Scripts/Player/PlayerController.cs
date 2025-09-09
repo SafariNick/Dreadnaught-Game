@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Player Settings")]
     [SerializeField] private int jumpCount = 1; // Track the number of jumps
-    [SerializeField] private int maxJumpCount = 2; // Maximum number of jumps allowed
+    [SerializeField] private int maxJumpCount = 3; // Maximum number of jumps allowed
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 5f;
 
@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     private GroundCheck groundCheck;
     private Shoot shoot; // Reference to the Shoot component for firing projectiles
     private Coroutine jumpForceChange = null;
+
+    public 
 
   
     void Start()
@@ -83,17 +85,19 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("Missle", false);
         }
-        if (Input.GetButtonDown("Jump") && jumpCount < maxJumpCount)
+        if (Input.GetButtonDown("Jump") && jumpCount <= maxJumpCount)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // Apply jump force
             jumpCount++;
             anim.SetBool("isJumping", true);
         }
-        if (groundCheck.IsGrounded)
+        //Ground Check
+        if (groundCheck.IsGrounded && rb.linearVelocityY < 0 )
         {
             jumpCount = 1; // Reset jump count when grounded
             anim.SetBool("isJumping", false);
         }
+
         //when player is jumping and left mouse button is clicked, set the animation to fistSlam.
         if (Input.GetButtonDown("Fire1") && currentState.IsName("jump"))
         {
@@ -101,12 +105,11 @@ public class PlayerController : MonoBehaviour
             //if player touches enemy while in fistSlam animation, enemy takes damage.
             if (currentState.IsName("FistSlam"))
             {
-                //check for enemies in a radius of 1 unit around the player.
-                Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, 1f, LayerMask.GetMask("Enemy"));
-                foreach (Collider2D enemy in hitEnemies)
-                {
-                    enemy.GetComponent<Enemy>().TakeDamage(50);
-                }
+                //make player invincible for 0.5 seconds
+                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), true);
+                //enemy.GetComponent<Enemy>().TakeDamage(50);
+                Invoke("ResetPlayerCollision", 5f);
+
             }
         }
 
@@ -177,7 +180,7 @@ public class PlayerController : MonoBehaviour
             jumpCount = 1; // Reset jump count after squishing an enemy
             anim.SetBool("isJumping", true);
             // Optionally, you can add a bounce effect or sound here
-
+           
         }
     }
 
