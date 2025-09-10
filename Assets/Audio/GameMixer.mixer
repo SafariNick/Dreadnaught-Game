@@ -20,22 +20,22 @@ AudioMixerController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Game Mixer
+  m_Name: GameMixer
   m_OutputGroup: {fileID: 0}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
   - {fileID: 24500006}
   m_StartSnapshot: {fileID: 24500006}
-  m_SuspendThreshold: -80
+  m_SuspendThreshold: 0
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
   - guid: 69b1bc586889d8b4bbc67637dcad2ccf
-    name: MyExposedParam
+    name: MasterVol
   - guid: 9c662f4ff1241e54daf6705e3efd0245
-    name: MyExposedParam 1
+    name: MusicVol
   - guid: df88f4809d834334b93fdec604e0d9c4
-    name: MyExposedParam 2
+    name: SFXVol
   m_AudioMixerGroupViews:
   - guids:
     - 52f8dfbe994376846a19358be25e11ff
@@ -88,7 +88,9 @@ AudioMixerSnapshotController:
   m_Name: Snapshot
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: e863cd67085b69c498a1cf1db7b5f534
-  m_FloatValues: {}
+  m_FloatValues:
+    69b1bc586889d8b4bbc67637dcad2ccf: 0
+    9c662f4ff1241e54daf6705e3efd0245: -0.02577656
   m_TransitionOverrides: {}
 --- !u!243 &1747846577297854241
 AudioMixerGroupController:

@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Audio;
+
 
 
 //abstract class is a class that cannot be instantiated, but can be inherited from - if you want to create a base class that other classes can inherit from, but you don't want to allow instantiation of the base class, this is the way to go.
@@ -11,7 +13,8 @@ public abstract class Enemy : MonoBehaviour
     // this can be a problem if you want to change the variable but don't want other scripts to be able to change it. Tracking down bugs can be difficult if you have many
     // scripts that can change the variable.
 
-
+    public AudioClip deathSound;
+    private AudioSource audioSource;
 
     protected SpriteRenderer sr;
     protected Animator anim;
@@ -25,6 +28,14 @@ public abstract class Enemy : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+
+        TryGetComponent(out audioSource);
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.outputAudioMixerGroup = GameManager.Instance.sfxMixerGroup;
+            Debug.LogWarning("AudioSource component missing. Added one dynamically.");
+        }
 
         if (maxHealth <= 0)
         {
@@ -43,6 +54,7 @@ public abstract class Enemy : MonoBehaviour
         {
             sr.color = Color.red; // Change color to red to indicate death
             anim.SetTrigger("Death");
+            audioSource?.PlayOneShot(deathSound);
 
             // Destroy the enemy after the death animation is complete
             if (transform.parent != null)

@@ -409,6 +409,9 @@ MonoBehaviour:
   moveSpeed: 10
   jumpForce: 5
   groundCheckRadius: 0.2
+  jumpSound: {fileID: 8300000, guid: c8fdf1fde7ed3ba4da41c6c8b23d26fe, type: 3}
+  stompSound: {fileID: 8300000, guid: b3e945f33bae86945acae55e4f1d5b4a, type: 3}
+  deathSound: {fileID: 8300000, guid: c48a24f7c376af54a941c30b61f1d2b8, type: 3}
 --- !u!114 &7473661875994464964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,6 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d5440d8b6e4d314c94c6ae209029219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootSound: {fileID: 8300000, guid: 3364eb89bdff3a04a94fde8bfaf55c7f, type: 3}
   missleVel: {x: 25, y: 3}
   bigBulletVel: {x: 35, y: 3}
   smallBulletVel: {x: 20, y: 2}

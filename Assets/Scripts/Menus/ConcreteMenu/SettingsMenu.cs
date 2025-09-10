@@ -1,11 +1,10 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Audio;
 public class SettingsMenu : BaseMenu
 {
-    public AudioMixer AudioMixer;
+    public AudioMixer audioMixer;
 
     public Button backButton;
     public Button creditsButton;
@@ -28,23 +27,41 @@ public class SettingsMenu : BaseMenu
         if (creditsButton) creditsButton.onClick.AddListener(() => JumpTo(MenuStates.Credits));
 
         if (masterVolSlider)
-            SetupSliderInformation(masterVolSlider, masterVolText, "MasterVolume");
+        {
+            SetupSliderInformation(masterVolSlider, masterVolText, "MasterVol");
+            OnSliderValueChanged(masterVolSlider.value, masterVolSlider, masterVolText, "MasterVol");
+        }
         if (musicVolSlider)
-            SetupSliderInformation(musicVolSlider, musicVolText, "MusicVolume");
+        {
+            SetupSliderInformation(musicVolSlider, musicVolText, "MusicVol");
+            OnSliderValueChanged(musicVolSlider.value, musicVolSlider, musicVolText, "MusicVol");
+        }
+
         if (sfxVolSlider)
-            SetupSliderInformation(sfxVolSlider, sfxVolText, "SFXVolume");
+        {
+            SetupSliderInformation(sfxVolSlider, sfxVolText, "SFXVol");
+            OnSliderValueChanged(sfxVolSlider.value, sfxVolSlider, sfxVolText, "SFXVol");
+        }
     }
     private void SetupSliderInformation(Slider slider, TMP_Text text, string parameterName)
     {
-        //slider.onValueChanged.AddListener((value) => OnSliderValueChanged(value, slider, text, parameterName));
+        slider.onValueChanged.AddListener((value) => OnSliderValueChanged(value, slider, text, parameterName));
     }
-    private void OnSliderValueChanged(Slider slider, TMP_Text text, string parameterName)
+
+    private void OnSliderValueChanged(float value, Slider slider, TMP_Text text, string parameterName)
     {
-        //if ( value == 0)
+        if (value == 0)
         {
-            
+            value = -80;
+            text.text = $"0%";
+        }
+        else
+        {
+            value = Mathf.Log10(value) * 20;
+            text.text = $"{Mathf.RoundToInt(slider.value * 100)}%";
         }
 
+        audioMixer.SetFloat(parameterName, value);
     }
-    
+
 }

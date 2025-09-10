@@ -67,14 +67,27 @@ public class MenuController : MonoBehaviour
 
         if (!fromJumpBack)
         {
-            if (menuStack.Count > 0)
+            if (menuStack.Count > 0 && menuStack.Contains(newState))
             {
-                if (menuStack.Contains(newState))
+                List<MenuStates> oldStates = new List<MenuStates>();
+                //remove everything above the new state
+                while (menuStack.Peek() != newState)
                 {
-                    menuStack.Pop(); //remove the current instance of this state if it exists to avoid duplicates in the stack
-                    return;
+                    oldStates.Add(menuStack.Pop());
                 }
 
+                //pop the new state as we need to re-add it to the top of the stack
+                menuStack.Pop();
+
+                //we need to re-add the old states back to the stack
+                for (int i = oldStates.Count - 1; i >= 0; i--)
+                {
+                    menuStack.Push(oldStates[i]);
+                }
+
+                menuStack.Push(newState);
+                //we don't need to push the new state because it is already on the stack
+                return;
             }
             menuStack.Push(newState);
         }

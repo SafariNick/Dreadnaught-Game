@@ -27,7 +27,11 @@ public class PlayerController : MonoBehaviour
     private Shoot shoot; // Reference to the Shoot component for firing projectiles
     private Coroutine jumpForceChange = null;
 
-    public 
+    public AudioClip jumpSound;
+    public AudioClip stompSound;
+    public AudioClip deathSound;
+    private AudioSource audioSource;
+    
 
   
     void Start()
@@ -90,6 +94,17 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // Apply jump force
             jumpCount++;
             anim.SetBool("isJumping", true);
+            if (jumpSound != null)
+            {
+                TryGetComponent(out audioSource);
+
+                if (audioSource == null)
+                {
+                    audioSource = gameObject.AddComponent<AudioSource>();
+                    audioSource.outputAudioMixerGroup = GameManager.Instance.sfxMixerGroup;
+                    Debug.LogWarning("AudioSource component missing. Added one dynamically.");
+                }
+            }
         }
         //Ground Check
         if (groundCheck.IsGrounded && rb.linearVelocityY < 0 )
@@ -156,6 +171,8 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             GameManager.Instance.lives--;
+            if (deathSound != null)
+                audioSource?.PlayOneShot(deathSound);
         }
     }
 
@@ -180,7 +197,8 @@ public class PlayerController : MonoBehaviour
             jumpCount = 1; // Reset jump count after squishing an enemy
             anim.SetBool("isJumping", true);
             // Optionally, you can add a bounce effect or sound here
-           
+            if (stompSound != null)
+                audioSource?.PlayOneShot(stompSound);
         }
     }
 

@@ -1,7 +1,11 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Shoot : MonoBehaviour
 {
+    public AudioClip shootSound;
+    private AudioSource audioSource;
+
     private SpriteRenderer sr;
     private Vector2 initShotVelocity = Vector2.zero; //bullet speed
 
@@ -28,24 +32,30 @@ public class Shoot : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
 
+        if (shootSound != null)
+        {
+            TryGetComponent(out audioSource);
+
+            if (audioSource == null)
+            {
+                audioSource = gameObject.AddComponent<AudioSource>();
+
+                audioSource.outputAudioMixerGroup = GameManager.Instance.sfxMixerGroup;
+                Debug.LogWarning("AudioSource component missing. Added one dynamically.");
+            }
+        }
         if (initShotVelocity == Vector2.zero)
         {
             initShotVelocity = new Vector2(10f, 0f);
-            //Debug.LogWarning("Initial shot velocity not set, using default value: " + initShotVelocity);
+            
         }
-        
-        
-
-        //if (currentSpawn == null)
-        //{
-        //    Debug.LogError("Spawn points not set. Please assign leftSpawn and rightSpawn in the inspector.");
-        //}
-
         if (misslePrefab == null || bigBulletPrefab == null || smallBulletPrefab == null)
         {
             Debug.LogError("Projectile prefabs not assigned. Please assign misslePrefab, bigBulletPrefab, and smallBulletPrefab in the inspector.");
         }
+
     }
 
     public void FireMissle()
@@ -54,6 +64,7 @@ public class Shoot : MonoBehaviour
             Fire(misslePrefab, leftMissleSpawn, new Vector2(-missleVel.x, missleVel.y));
         else
             Fire(misslePrefab, rightMissleSpawn, missleVel);
+        audioSource?.PlayOneShot(shootSound);
 
     }
 
@@ -64,6 +75,7 @@ public class Shoot : MonoBehaviour
             Fire(bigBulletPrefab, leftBigBulletSpawn, new Vector2(-bigBulletVel.x, bigBulletVel.y));
         else
             Fire(bigBulletPrefab, rightBigBulletSpawn, bigBulletVel);
+        audioSource?.PlayOneShot(shootSound);
     }
 
     public void FireSmallBullet()
@@ -73,6 +85,7 @@ public class Shoot : MonoBehaviour
             Fire(smallBulletPrefab, leftSmallBulletSpawn, new Vector2(-smallBulletVel.x, smallBulletVel.y));
         else
             Fire(smallBulletPrefab, rightSmallBulletSpawn, smallBulletVel);
+        audioSource?.PlayOneShot(shootSound);
     }
     private void Fire(Projectile projectileToFire, Transform Spawn, Vector2 shotVel)
     {
