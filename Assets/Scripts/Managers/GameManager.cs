@@ -4,6 +4,7 @@ using UnityEngine.Events;
 using System;
 using UnityEngine.Audio;
 
+[DefaultExecutionOrder(-10)]
 public class GameManager : MonoBehaviour
 {
     public delegate void PlayerSpawnDelegate(PlayerController playerInstance);
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     public event Action<int> OnLivesChanged;
     public event Action<int> OnScoreChanged;
+    public event Action<float> OnLevelEnd;
 
     public AudioMixerGroup masterMixerGroup;
     public AudioMixerGroup musicMixerGroup;
@@ -27,6 +29,8 @@ public class GameManager : MonoBehaviour
     private int _lives = 3;
     private int _score = 0;
     private int _ammo = 100;
+    public float time = 0;
+    private bool isCounting = false;
     public int score
     {
         get => _score;
@@ -100,6 +104,28 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
+    void OnEnable()
+    {
+        SceneManager.activeSceneChanged += SceneChanged;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.activeSceneChanged -= SceneChanged;
+    }
+
+    void SceneChanged(Scene current, Scene next)
+    {
+        if (next.name != "Game")
+        {
+            isCounting = false;
+        }
+
+        if (next.name == "Victory")
+        {
+            OnLevelEnd?.Invoke(time);
+        }
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -108,15 +134,19 @@ public class GameManager : MonoBehaviour
     void GameOver()
     {
         SceneManager.LoadScene(2);
-        
-      
-
-
+     
     }
     void Respawn()
     {
         _playerInstance.transform.position = currentCheckpoint;
 
+    }
+    public void Victory()
+    {
+        isCounting = false;
+        OnLevelEnd?.Invoke(time);
+        Debug.Log("Victory! Level completed in " + time + " seconds.");
+        SceneManager.LoadScene(3);
     }
 
     public void StartLevel(Vector3 startPositon)
@@ -126,6 +156,8 @@ public class GameManager : MonoBehaviour
         OnPlayerControllerCreated.Invoke(_playerInstance);
         _lives = 3;
         _score = 0;
+        time = 0;
+        isCounting = true;
     }
 
     // Update is called once per frame
@@ -155,5 +187,10 @@ public class GameManager : MonoBehaviour
             lives--;
         }
 
+        if (isCounting)
+        {
+            time += Time.deltaTime;
+            
+        }
     }
 }

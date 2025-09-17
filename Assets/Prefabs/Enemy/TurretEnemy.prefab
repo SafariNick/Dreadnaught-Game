@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7747361907483746384}
   m_Layer: 0
-  m_Name: TurretEnemy1
+  m_Name: TurretEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d968c5824aaf7614db3f18534b5e6243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: c48a24f7c376af54a941c30b61f1d2b8, type: 3}
   maxHealth: 5
   Player: {fileID: 8845747615470993484, guid: 6e1b82556ec538c4194d8cf1c7595eea, type: 3}
   fireRate: 2

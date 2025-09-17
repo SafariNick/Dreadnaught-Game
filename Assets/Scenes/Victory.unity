@@ -1834,6 +1834,7 @@ MonoBehaviour:
   livesText: {fileID: 0}
   scoreText: {fileID: 241552358}
   ammoText: {fileID: 0}
+  time: {fileID: 520671544}
 --- !u!82 &1484687765
 AudioSource:
   m_ObjectHideFlags: 0

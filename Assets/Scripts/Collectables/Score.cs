@@ -5,9 +5,9 @@ public class Score : Pickup
     Rigidbody2D rb;
 
     private int xVel = -4;
-    public override void OnPickup(GameObject player) => player.GetComponent<GameManager>().score++;
+    public override void OnPickup() => GameManager.Instance.score += 50;
 
-    void Start()
+    public override void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.linearVelocity = new Vector2(xVel, 4); // Set the initial velocity to move downwards

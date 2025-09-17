@@ -35,8 +35,8 @@ public class Projectile : MonoBehaviour
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             if (enemy != null)
             {
-                enemy.TakeDamage(20); // Adjust damage value as necessary
-                GameManager.Instance.score += 20;
+                enemy.TakeDamage(5); // Adjust damage value as necessary
+                GameManager.Instance.score += 10;
 
             }
         }
@@ -47,7 +47,7 @@ public class Projectile : MonoBehaviour
             if (enemy != null)
             {
                 enemy.TakeDamage(5); // Adjust damage value as necessary
-                GameManager.Instance.score += 5;
+                GameManager.Instance.score += 30;
 
             }
         }
@@ -55,7 +55,7 @@ public class Projectile : MonoBehaviour
         if (projectileType == ProjectileType.Enemy && collision.gameObject.CompareTag("Player"))
         {
             GameManager.Instance.lives--;
-            GameManager.Instance.score -= 10;
+            GameManager.Instance.score -= 100;
             Destroy(gameObject);
         }
     }

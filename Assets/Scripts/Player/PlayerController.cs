@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Collider2D))]
 [RequireComponent(typeof(Animator))]
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private Shoot shoot; // Reference to the Shoot component for firing projectiles
     private Coroutine jumpForceChange = null;
 
+    [Header("Audio Clips")]
     public AudioClip jumpSound;
     public AudioClip stompSound;
     public AudioClip deathSound;
@@ -51,6 +53,18 @@ public class PlayerController : MonoBehaviour
             return;
         }
         groundCheck = new GroundCheck(col, groundLayer, groundCheckRadius);
+
+        if (jumpSound != null)
+        {
+            TryGetComponent(out audioSource);
+
+            if (audioSource == null)
+            {
+                audioSource = gameObject.AddComponent<AudioSource>();
+                audioSource.outputAudioMixerGroup = GameManager.Instance.sfxMixerGroup;
+                Debug.LogWarning("AudioSource component missing. Added one dynamically.");
+            }
+        }
     }
     void Update()
     {
@@ -94,17 +108,7 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // Apply jump force
             jumpCount++;
             anim.SetBool("isJumping", true);
-            if (jumpSound != null)
-            {
-                TryGetComponent(out audioSource);
-
-                if (audioSource == null)
-                {
-                    audioSource = gameObject.AddComponent<AudioSource>();
-                    audioSource.outputAudioMixerGroup = GameManager.Instance.sfxMixerGroup;
-                    Debug.LogWarning("AudioSource component missing. Added one dynamically.");
-                }
-            }
+            audioSource?.PlayOneShot(jumpSound);
         }
         //Ground Check
         if (groundCheck.IsGrounded && rb.linearVelocityY < 0 )
@@ -118,14 +122,7 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetTrigger("FistSlam");
             //if player touches enemy while in fistSlam animation, enemy takes damage.
-            if (currentState.IsName("FistSlam"))
-            {
-                //make player invincible for 0.5 seconds
-                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), true);
-                //enemy.GetComponent<Enemy>().TakeDamage(50);
-                Invoke("ResetPlayerCollision", 5f);
-
-            }
+            
         }
 
         if (!currentState.IsName("jump"))
@@ -172,7 +169,8 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.Instance.lives--;
             if (deathSound != null)
-                audioSource?.PlayOneShot(deathSound);
+            audioSource?.PlayOneShot(deathSound);
+           
         }
     }
 
@@ -196,9 +194,17 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             jumpCount = 1; // Reset jump count after squishing an enemy
             anim.SetBool("isJumping", true);
-            // Optionally, you can add a bounce effect or sound here
+            //sound
             if (stompSound != null)
                 audioSource?.PlayOneShot(stompSound);
+        }
+        if (collision.CompareTag("SpawnerEnemy"))
+        {
+            Destroy(collision.gameObject);
+        }
+        if (collision.CompareTag("Finish"))
+        {
+            GameManager.Instance.Victory();
         }
     }
 

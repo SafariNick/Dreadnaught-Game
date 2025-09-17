@@ -8,6 +8,7 @@ TagManager:
   - Barrier
   - Squish
   - Enemy
+  - SpawnerEnemy
   layers:
   - Default
   - TransparentFX

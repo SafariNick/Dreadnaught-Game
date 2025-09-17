@@ -27,7 +27,8 @@ public class CanvasManager : MonoBehaviour
     public TMP_Text livesText;
     public TMP_Text scoreText;
     public TMP_Text ammoText;
-    
+    public TMP_Text time;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -55,6 +56,11 @@ public class CanvasManager : MonoBehaviour
         {
             scoreText.text = $"Score: {GameManager.Instance.score}";
             GameManager.Instance.OnScoreChanged += (score) => scoreText.text = $"Score: {score}";
+        }
+        if (time)
+        {
+          
+            time.text = $"Time: {Mathf.FloorToInt(GameManager.Instance.time)}s";
         }
     }
 

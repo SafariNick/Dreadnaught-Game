@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1749569109280424446}
   - component: {fileID: 6727976421445655040}
+  - component: {fileID: 4827451469539916391}
   - component: {fileID: 1487360939984907902}
   - component: {fileID: 2987985891599319714}
   - component: {fileID: 7777426905228222221}
-  - component: {fileID: 4827451469539916391}
   m_Layer: 0
   m_Name: Nurgle
   m_TagString: Enemy
@@ -91,6 +91,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4827451469539916391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5695046874436782426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3538c2730b5af14a9e0055667c21aa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: c48a24f7c376af54a941c30b61f1d2b8, type: 3}
+  maxHealth: 5
+  xVelocity: 1.2
 --- !u!61 &1487360939984907902
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -186,17 +201,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4827451469539916391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5695046874436782426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3538c2730b5af14a9e0055667c21aa2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 5
-  xVelocity: 1
